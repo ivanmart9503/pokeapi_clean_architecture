@@ -3,10 +3,12 @@ import 'package:pokeapi_clean_architecture/features/pokeapi/domain/entities/poke
 
 class PokemonModel extends Pokemon {
   PokemonModel({
+    @required int id,
     @required String name,
     @required List<String> types,
     @required String spriteUrl,
   }) : super(
+          id: id,
           name: name,
           types: types,
           spriteUrl: spriteUrl,
@@ -14,6 +16,7 @@ class PokemonModel extends Pokemon {
 
   factory PokemonModel.fromJson(Map<String, dynamic> json) {
     return PokemonModel(
+      id: json['id'],
       name: json['name'],
       types: getTypesFromJson(json),
       spriteUrl: getSpriteUrlFromJson(json),
@@ -22,6 +25,7 @@ class PokemonModel extends Pokemon {
 
   Map<String, dynamic> toJson() {
     return {
+      "id": id,
       "name": name,
       "types": types
           .map((type) => {

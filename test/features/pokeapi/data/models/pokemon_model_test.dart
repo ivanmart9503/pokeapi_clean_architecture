@@ -8,6 +8,7 @@ import '../../../../core/fixtures/fixture_reader.dart';
 
 void main() {
   final tPokemonModel = PokemonModel(
+    id: 1,
     name: 'Bulbasaur',
     types: ['grass', 'poison'],
     spriteUrl:
@@ -77,6 +78,7 @@ void main() {
 
       // Assert
       final Map<String, dynamic> expectedJsonMap = {
+        "id": 1,
         "name": "Bulbasaur",
         "types": [
           {

@@ -17,6 +17,7 @@ void main() {
   });
 
   final tPokemon = Pokemon(
+    id: 1,
     name: 'Bulbasaur',
     types: ['grass', 'poison'],
     spriteUrl:

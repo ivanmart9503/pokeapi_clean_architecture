@@ -61,6 +61,7 @@ void main() {
 
   group('cachePokemon', () {
     final tPokemonModel = PokemonModel(
+      id: 1,
       name: 'Bulbasaur',
       types: ['grass', 'poison'],
       spriteUrl:
